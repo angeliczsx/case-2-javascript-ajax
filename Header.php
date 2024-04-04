@@ -5,7 +5,7 @@
 <div class="flex-end">
     <a class="btn btn-ghost text-xl text-[#ECD7CD]"><?php 
     if(isset($_GET['username']) && !empty($_GET['username'])){
-    echo "Welcome, ".$_GET['username'];
+    echo "Welcome, ".$_GET['username']."!";
     }else{
         echo 'Tolong masukkan username di query url!!!';
     }
