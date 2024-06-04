@@ -347,7 +347,14 @@
         <p>Selamat datang di platform belajar dan berdiskusi bersama! Bergabunglah dengan ribuan teman dari berbagai belahan dunia untuk memperluas pengetahuan dan berbagi ide.</p><br>
         <h2>Mari kita jelajahi dunia pembelajaran secara bersama-sama!</h2>
     </div>
-    <div class="container">
+
+    <!-- chat section -->
+    <div id="toggle" class="size-12 fixed bottom-10 right-10">
+        <span class="rounded-full bg-[#7AA2E3] p-5">
+            <i class="far fa-comments"></i>
+        </span>
+    </div>
+    <div class="container" id="kotak">
         <div class="chat-container">
             <div class="chat-header">
                 <h3>Chat dengan <?php echo $penerima; ?></h3>
@@ -411,6 +418,22 @@
         <p>Simak Keseruan Belajar dan Berdiskusi Bersama Teman di Berbagai Belahan Dunia.</p>
     </div>
     </section>
+
+    <!-- untuk klik icon comments -->
+    <script>
+    const toggle = document.getElementById('toggle');
+    const kotak = document.getElementById('kotak');
+
+    toggle.addEventListener('click', () => {
+        // Toggle class 'hidden' pada elemen container
+        kotak.classList.toggle('hidden');
+
+        // Jika chatbox ditampilkan, hilangkan class 'hidden' dari elemen container
+        if (!kotak.classList.contains('hidden')) {
+            kotak.classList.remove('hidden');
+        }
+    });
+</script>
 
 </body>
 
